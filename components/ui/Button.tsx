@@ -5,14 +5,15 @@ interface ButtonProps extends HTMLMotionProps<"button"> {
   variant?: 'primary' | 'secondary' | 'outline';
   children: React.ReactNode;
   className?: string;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-export const Button: React.FC<ButtonProps> = ({ 
+export const Button = ({ 
   variant = 'primary', 
   children, 
   className = '',
   ...props 
-}) => {
+}: ButtonProps) => {
   const baseStyles = "px-8 py-3 font-display font-bold tracking-wide text-sm uppercase transition-colors duration-300 flex items-center justify-center gap-2";
   
   const variants = {
