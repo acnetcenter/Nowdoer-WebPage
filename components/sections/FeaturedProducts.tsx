@@ -40,15 +40,31 @@ export const FeaturedProducts: React.FC = () => {
                     {product.badge}
                   </span>
                 )}
-                <img 
-                  src={product.imageUrl} 
-                  alt={product.name}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
-                />
+                
+                {/* Image Logic: Swap if hoverImageUrl exists, otherwise simple zoom */}
+                <div className="w-full h-full relative">
+                  <img 
+                    src={product.imageUrl} 
+                    alt={product.name}
+                    className={`w-full h-full object-cover transition-all duration-700 
+                      ${product.hoverImageUrl 
+                        ? 'group-hover:opacity-0 absolute inset-0' 
+                        : 'group-hover:scale-110 opacity-80 group-hover:opacity-100'
+                      }`}
+                  />
+                  
+                  {product.hoverImageUrl && (
+                    <img 
+                      src={product.hoverImageUrl} 
+                      alt={`${product.name} Back view`}
+                      className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+                    />
+                  )}
+                </div>
                 
                 {/* Quick Add Overlay */}
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <Button variant="secondary" className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                  <Button variant="secondary" className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300 pointer-events-auto">
                     Add to Cart
                   </Button>
                 </div>

@@ -14,7 +14,8 @@ export const FEATURED_PRODUCTS: Product[] = [
     name: 'The Executioner Hoodie',
     category: 'Hoodies',
     price: 59.99,
-    imageUrl: 'https://picsum.photos/600/800?random=1',
+    imageUrl: 'https://nyc.cloud.appwrite.io/v1/storage/buckets/691e68c00029dbd6e3fb/files/691e6975001ff99e8ea5/view?project=691e1a030018ba2b2568&mode=admin',
+    hoverImageUrl: 'https://nyc.cloud.appwrite.io/v1/storage/buckets/691e68c00029dbd6e3fb/files/691e696e0036d9d31cb8/view?project=691e1a030018ba2b2568&mode=admin', 
     badge: 'Best Seller'
   },
   {
@@ -22,7 +23,8 @@ export const FEATURED_PRODUCTS: Product[] = [
     name: 'Zero Excuse Tee',
     category: 'T-Shirts',
     price: 29.99,
-    imageUrl: 'https://picsum.photos/600/800?random=2',
+    imageUrl: 'https://nyc.cloud.appwrite.io/v1/storage/buckets/691e68c00029dbd6e3fb/files/691e69850010bc9cc1fd/view?project=691e1a030018ba2b2568&mode=admin',
+    hoverImageUrl: 'https://nyc.cloud.appwrite.io/v1/storage/buckets/691e68c00029dbd6e3fb/files/691e697c002dafd77bbc/view?project=691e1a030018ba2b2568&mode=admin',
     badge: 'New Arrival'
   },
   {
@@ -30,7 +32,8 @@ export const FEATURED_PRODUCTS: Product[] = [
     name: 'Momentum Oversized',
     category: 'Hoodies',
     price: 64.99,
-    imageUrl: 'https://picsum.photos/600/800?random=3',
+    imageUrl: 'https://nyc.cloud.appwrite.io/v1/storage/buckets/691e68c00029dbd6e3fb/files/691e690800066e482d2a/view?project=691e1a030018ba2b2568&mode=admin',
+    hoverImageUrl: 'https://nyc.cloud.appwrite.io/v1/storage/buckets/691e68c00029dbd6e3fb/files/691e68fa002e473761dc/view?project=691e1a030018ba2b2568&mode=admin'
   }
 ];
 
